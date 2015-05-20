@@ -4,7 +4,6 @@
   <artifactId>garuda-api</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <build>
-    <sourceDirectory>src</sourceDirectory>
     <plugins>
       <plugin>
         <artifactId>maven-compiler-plugin</artifactId>
@@ -27,6 +26,7 @@
   		<groupId>javax.servlet</groupId>
   		<artifactId>javax.servlet-api</artifactId>
   		<version>3.1.0</version>
+        <scope>provided</scope>
   	</dependency>
   </dependencies>
 
