@@ -26,6 +26,18 @@ public class TenantContext{
 		local.set(this);
 
 	}
+
+	public static Object nonTenantSpecificOperation(Operation logic){
+		String tenantId = getThreadLocalInstance().getTenantId();
+
+		new TenantContext(null);
+
+		Object returnValue = logic.run();
+
+		new TenantContext(tenantId);
+
+		return returnValue;
+	}
 	
 
 	
