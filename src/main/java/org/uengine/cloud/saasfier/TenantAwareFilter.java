@@ -11,7 +11,7 @@ import javax.servlet.ServletResponse;
 import javax.servlet.annotation.WebFilter;
 import javax.servlet.http.HttpServletRequest;
 
-@WebFilter(filterName="TenantAwareFilter", urlPatterns={ "/*" })
+//@WebFilter(filterName="TenantAwareFilter", urlPatterns={ "/*" }) // this makes an undesired filter installation.
 public class TenantAwareFilter implements Filter{
 
 	@Override
